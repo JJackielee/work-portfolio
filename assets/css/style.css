@@ -1,24 +1,29 @@
 *{
     margin:0px;
     padding:0px;
+    font-family: sans-serif;
 }
 /* makes navigation/header part to be flex so they align together */
 header{
     display: flex;
     flex-wrap:wrap;
-    background-color:blue;
+    background-color: #353535;
     justify-content:space-between;
     padding:10px;
-    height:10vh;
+    min-height:10vh;
     align-items: center;
 }
 main{
-    background-color:red;
+    background-color: #284b63;
     padding:20px;
+    min-height:75vh;
 }
-/* name header styling */
+/* h1 header styling */
 header h1{
     text-align: center;
+    color: white;
+    margin:30px;
+    font-size: 300%;
 }
 
 nav{
@@ -26,7 +31,7 @@ nav{
     flex-wrap:wrap;
 }
 
-/* link styling in navigation */
+/* navigation link styling */
 nav a {
     align-items: center;
     color: white;
@@ -34,24 +39,36 @@ nav a {
     text-align: center;
     padding:10px;
   }
-/* description styling to have title line up on bottom right */
+
+
+
+/* description styling to have title line up on bottom right 
+    also added a background image and made it so it covers the entire section*/
 .description{
     display:flex;
-    background-color:salmon;
-    min-height:20vh;
+    background-image:url("./images/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:15vh;
     justify-content: right;
     align-items: end;
     margin-bottom:10px;
+
 }
 
 .description h2{
     padding:30px;
+    color:white;
+    background-color: #3c6e71;
 }
 
 
 /* main section */
 
-/* about me section  / and aside title layouts*/
+/* about me section  / and aside title layouts
+made them all a flex so they can site properly next to each other while the screen adjusts
+also added styling to make them look more organized and consistent to the page*/
 .about-me, .work, .contact-me{
     display:flex;
     margin-bottom:10px;
@@ -64,7 +81,8 @@ nav a {
     justify-content: right;
     padding:20px;
     margin-right:20px;
-    border-right: 2px solid black;
+    border-right: 2px solid white;
+    color:white;
 }
 
 .about-me div, .work div, .contact-me div{
@@ -73,10 +91,12 @@ nav a {
 
 .about-me div p{
     margin:10px;
+    color:white;
 }
 
 
 /* projects section */
+
 .projects{
     display:flex;
     flex-wrap:wrap;
@@ -87,39 +107,93 @@ nav a {
     width:100%;
 }
 
-/* .projects div{
-    margin:10px;
-    width:47%;
-    height:100px;
-    background:yellow;
-}
-
-.projects #main-work{
-    margin:10px;
-    width:96%;
-    height:400px;
-    background:gray;
-} */
-
-
 .row{
     width:100%;
     display:flex;
     justify-content:center;
-    flex-wrap;
 }
 
 .row div{
-    background-color: pink;
     margin:10px;
+    border: 5px solid #3c6e71;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* styling for the link to be in a box  */
+.first-project a, .other-project a{
+    display:block;
+    background-color: #3c6e71;
+    width:200px;
+    height:25px;
+    color: white;
+    font-size: 120%;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align:center;
+}
+
+/* styling for the description to also be in a box */
+.first-project a p, .other-project a p{
+    display:block;
+    background-color: #3c6e71;
+    width:200px;
+    height:25px;
+    color: white;
+    font-size: 50%;
+    text-decoration: none;
+    text-align:center;
+    font-weight:normal;
+}
+
+
 
 .first-project{
     height:400px;
+    background-image: url(./images/project1.jpg);
+    
+}
+
+.first-project a{
+    position:relative;
+    top:300px;
 }
 
 .other-project{
-    height:100px;
+    height:150px;
+}
+
+.other-project a{
+    position:relative;
+    top:70px;
+}
+
+
+#other1{
+    background-image: url(./images/project2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#other2{
+    background-image: url(./images/project3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#other3{
+    background-image: url(./images/project4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#other4{
+    background-image: url(./images/project5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -129,6 +203,14 @@ nav a {
     align-items: center;
     justify-content: space-evenly;
     
+}
+
+.contact-me div a{
+    color:white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size:100%;
+
 }
 
 
@@ -149,7 +231,7 @@ nav a {
         display:flex;
         width:93%;
         justify-content: center;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid white;
         border-right: 0px;
         margin-bottom:10px;
     }
@@ -161,8 +243,3 @@ nav a {
     .row div{
         margin-left:0px;
     }
-
-
-
-
-
