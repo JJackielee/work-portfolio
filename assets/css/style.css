@@ -38,7 +38,11 @@ nav a {
     text-decoration: none;
     text-align: center;
     padding:10px;
+    transition: .5s ease;
   }
+nav a:hover{
+    color:#3c6e71;
+}
 
 
 
@@ -94,9 +98,15 @@ also added styling to make them look more organized and consistent to the page*/
     color:white;
 }
 
+.about-me div{
+    display:flex;
+    text-align: left;
+}
+
 
 /* projects section */
 
+/* makes everything a flex box so they can wrap each other */
 .projects{
     display:flex;
     flex-wrap:wrap;
@@ -120,7 +130,7 @@ also added styling to make them look more organized and consistent to the page*/
     background-size: cover;
 }
 
-/* styling for the link to be in a box  */
+/* styling for the a tag link to be in a box  */
 .first-project a, .other-project a{
     display:block;
     background-color: #3c6e71;
@@ -147,11 +157,17 @@ also added styling to make them look more organized and consistent to the page*/
 }
 
 
-
+/* styling for the main project to be bigger than side projects */
 .first-project{
     height:400px;
     background-image: url(./images/project1.jpg);
+    opacity:.5;
+    transition: .5s ease;
     
+}
+/* when hover over project item. it becomes highlighted and more visible  */
+.first-project:hover{
+    opacity:1;
 }
 
 .first-project a{
@@ -159,16 +175,24 @@ also added styling to make them look more organized and consistent to the page*/
     top:300px;
 }
 
+
+/* styling for side project to be smaller */
 .other-project{
     height:150px;
+    opacity:.5;
+    transition: .5s ease;
 }
 
+/* when hover over side projects item. it becomes highlighted and more visible  */
+.other-project:hover{
+    opacity:1;
+}
 .other-project a{
     position:relative;
     top:70px;
 }
 
-
+/* id for each smaller projects so they can have different images */
 #other1{
     background-image: url(./images/project2.png);
     background-repeat: no-repeat;
@@ -198,6 +222,8 @@ also added styling to make them look more organized and consistent to the page*/
 
 
 /* contact me section */
+
+/* everything here is also a flex box so the links can be side by side and also adjust while the windows changes. */
 .contact-me div{
     display:flex;
     align-items: center;
@@ -210,10 +236,15 @@ also added styling to make them look more organized and consistent to the page*/
     text-decoration: none;
     font-weight: bolder;
     font-size:100%;
-
+    transition: .5s ease;
 }
 
+.contact-me div a:hover{
+  color:#3c6e71;
+    
+}
 
+/* when media screen gets smaller than 768 px everything should readjust to sit vertically */
 
 @media screen and (max-width: 768px) {
 
@@ -226,7 +257,7 @@ also added styling to make them look more organized and consistent to the page*/
         flex-direction: column;
         margin:0px;
     }
-
+/* changed the direction of the border for the 2nd headers in the main section */
     .about-me aside, .work aside, .contact-me aside{
         display:flex;
         width:93%;
@@ -235,7 +266,8 @@ also added styling to make them look more organized and consistent to the page*/
         border-right: 0px;
         margin-bottom:10px;
     }
-
+/* changed the size of the container that the projects were sitting so they can take up 100% 
+of the horizontal length once everything is lining up vertically */
     .about-me div, .work div, .contact-me div{
         width:100%;
     }

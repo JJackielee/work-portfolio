@@ -23,13 +23,18 @@
         <h2>Student Web Developer</h2>
     </section>
 
+
+    <!-- main section contains flex boxes so we can have an aside tag for the 2nd headers and a section tag for the content in 
+    each respective sections.  -->
     <main>
         <!-- About me section -->
+        <!-- h2 tag for the 2nd header and uses a p tag contained by a div to write my about me description and have it sit on the right side of the page -->
         <section class="about-me" id="about-me">
             <aside>
                 <h2>About me</h2>
             </aside>
             <div>
+                <img src="./assets/css/images/avatar.jpg" width="150px" height="150px">
                 <p>My name is Jackie Lee. I am currently a University of Washington coding bootcamp student. I graduated with a BA degree from the university washington.
                     I worked in the real estate industry for about two years and have an educational background in UX design! I am a life long learning and is trying to 
                     break into the tech industry with this course!
@@ -38,7 +43,9 @@
         </section>
 
         <!-- Work Section -->
-        
+        <!-- similar to the other sections there aside tag for the header and a div class for the content.
+        created a div tag with the class row to seperate each row as tehre are three. first row will only have 1 project
+        while the other two rows will have two smaller projects. everything is flex wraped.  -->
         <section class="work" id="work">
 
             <aside>
@@ -49,14 +56,14 @@
                 
                 <div class="row">
                     <div class="first-project" title="picture of first project (horiseon refactor)">
-                        <a href="https://github.com/JJackielee/horiseon-refactor">Horiseon Refactor
+                        <a href="https://jjackielee.github.io/horiseon-refactor/">Horiseon Refactor
                             <p>My first project in the coding bootcamp. refactors code for better semantics!</p>
                         </a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="other-project" id="other1" title="picture of second project of pre work study guide">
-                        <a href="https://github.com/JJackielee/prework-study-guide">Study Guide
+                        <a href="https://jjackielee.github.io/prework-study-guide/">Study Guide
                             <p>A website that lets me save and organize my notes on the bootcamp!</p>
                         </a>
                     </div>
@@ -87,6 +94,7 @@
         </section>
 
         <!-- Contact me section -->
+        <!-- similar to the other section aside tag on the left and div on the right for organization. uses a tags as links to my contacts -->
         <section class="contact-me" id="contact-me">
 
             <aside>
